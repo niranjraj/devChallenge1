@@ -1,0 +1,123 @@
+:root {
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --dark: #333;
+  --dark-gray: #4f4f4f;
+  --white: #ffffff;
+  --gray: #bdbdbd;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--dark);
+  min-height: 100vh;
+  background-color: var(--white);
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.25em, 4vw, 40px) clamp(1.5em, 4vw, 77px);
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-header {
+  font-family: "Inconsolata", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--dark);
+  letter-spacing: -0.08em;
+}
+
+img {
+  height: clamp(238px, 50%, 447px);
+  width: clamp(286.82px, 50%, 539.22px);
+
+  margin-top: 4em;
+  margin-bottom: 3.75em;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-text h1 {
+  font-family: "Space Mono", monospace;
+  font-size: clamp(3rem, 5vmax, 4rem);
+  line-height: clamp(71px, 5vmax, 95px);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.035em;
+  margin-bottom: 30px;
+}
+
+.content-text p {
+  font-family: "Space Mono", monospace;
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  color: var(--dark-gray);
+  width: clamp(328px, 70%, 381px);
+  margin-bottom: 3.66em;
+  line-height: clamp(26.66px, 5vmax, 36px);
+}
+
+.button {
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 0.875rem;
+  background-color: var(--dark);
+  padding: 1.71em 3.071em;
+  font-family: Space Mono;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.035em;
+  text-align: left;
+}
+
+.footer {
+  margin-top: 7.125em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer a {
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  width: 100%;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  color: var(--gray);
+}
+
+@media screen and (min-width: 800px) {
+  .content-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .content-text {
+    width: 586px;
+  }
+}
